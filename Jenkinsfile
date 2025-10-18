@@ -47,6 +47,11 @@ pipeline {
     failure {
       echo 'Frontend pipeline failed'
     }
+success {
+      echo '✅ Frontend deployed successfully!'
+    }
+  }
+}
   }
 }
 
