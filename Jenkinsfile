@@ -12,7 +12,7 @@ pipeline {
       }
     }
 
-    stage('Install') {
+    stage('Install Dependencies') {
       steps {
         sh 'npm ci'
       }
@@ -45,13 +45,11 @@ pipeline {
 
   post {
     failure {
-      echo 'Frontend pipeline failed'
+      echo '❌ Frontend pipeline failed'
     }
-success {
+    success {
       echo '✅ Frontend deployed successfully!'
     }
-  }
-}
   }
 }
 
